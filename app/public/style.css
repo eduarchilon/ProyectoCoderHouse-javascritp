@@ -1,0 +1,817 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 2.4vw;
+    font-weight: 500;
+}
+
+main{
+    padding: 15px 50px;
+    /* background: linear-gradient(to left, rgb(241, 222, 51), rgb(96, 49, 204)); */
+    /* background-image: url(fondo.jpg);
+    min-height: 100%;
+    background-size: cover;  */
+    z-index: -1;
+}
+
+/*HEADER*/
+.header{
+    background-color:#000;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 60px;
+    grid-template-areas: "logo titulo nav";
+}
+
+.header{
+    position: -webkit-sticky; /*para que funcione en el navegador*/
+    position: sticky; 
+    top: 0;
+    opacity: 1;
+    z-index: 1111;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.8) !important; /*es clave para el color*/
+}
+
+.header__logo{
+    grid-area: logo;
+    align-self: center;
+    justify-self: center; 
+}
+
+.header__logo a img{
+    width: 70%;
+    display: block;
+    margin:auto;
+}
+
+.header__titulo{
+    grid-area: titulo;
+    text-align: center;
+    display: block;
+    margin: auto;
+
+}
+
+
+.nav{
+    grid-area: nav;
+}
+
+.nav__btn{
+    display: none;
+}
+
+.nav__menu ul{
+    display: flex;
+}
+
+.nav__menu ul li a{
+    text-decoration: none;
+    align-content: space-around;
+    line-height:60px ;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: rgb(245, 251, 63);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav__menu ul li{
+    list-style: none;
+    margin: auto;
+}
+
+.nav__btn button{
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.nav__btn button:active{
+    border: 2px solid #fff;
+}
+/*FIN HEADER*/
+
+/*GENERADOR*/
+/* .generador{
+    margin-top: 20px;
+} */
+
+.contenedor__resultado{
+    text-align: center;
+}
+/*------------*/
+/*FORMULARIO*/
+.formulario{
+    display: grid;
+    grid-template-columns:40% 20% 40%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:    "t1 t2 t3"
+                            "datos smes cal"
+                            "btn1 btn1 btn1";
+    padding: 20px;
+    margin: 10px 100px;
+    border-radius: 5px;
+    border: 2px solid #00f0f0;
+}
+
+.formulario label{
+    font-weight: 500;
+}
+
+.f-t{
+    text-align: center;
+}
+
+.form__t1{
+    grid-area: t1;
+}
+
+.form__t2{
+    grid-area: t2;
+}
+
+.form__t3{
+    grid-area: t3;
+}
+
+.cont__datos{
+    grid-area: datos;
+    margin: auto;
+    display: block;
+}
+
+.datos__item  label, input{
+    display: block;
+    margin: 5px;
+} 
+
+.datos__item input{
+    border-radius: 5px;
+    border: 1px solid #00f0f0;
+}
+
+
+
+.cont__mes{
+    grid-area: smes;
+    display: block;
+    margin: auto;
+}
+
+.cont__mes select{
+    border: 1px solid #00f0f0;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.cont__calculadora{
+    grid-area: cal;
+    display: block;
+    margin: auto;
+}
+
+.calc_item  label, input{
+    display: block;
+    margin: 5px;
+} 
+
+.calc_item input{
+    border-radius: 5px;
+    border: 1px solid #00f0f0;
+}
+
+
+.cont__btn-1{
+    grid-area: btn1;
+    margin: auto;
+    display: block;
+}
+
+.cont__btn-1 button{
+    padding: 3px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+/*PORTADA*/
+.portada{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.portada img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+/*LISTA DE PERSONAL*/
+.titulo__personal{
+    margin-top: 30px;
+}
+
+.personas__lista-titulo{
+    height: 30px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.personal{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+   
+}
+
+.personal__slogan{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.personal__slogan img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.personal__lista{
+    height: min-content;
+    text-align: justify;
+    margin-left: 10%;
+    padding: 10px 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas:    "listalista"
+                            "datodato";
+                            
+}
+
+
+.personal__lista-datos{
+    overflow-y: scroll;
+    height: 440px;
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.personal-item{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
+
+.p-t{
+    margin-bottom: 5px;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+
+/*HISTORIAL*/
+.historial__recibos{
+    margin: 30px 0;
+}
+
+.historial{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas:    "select1 select2"
+                            "bt1 bt2";
+                            padding: 20px;
+                            margin: 10px 100px;
+                            border-radius: 5px;
+                            border: 2px solid #00f0f0;
+}
+
+.historial_item, .historial_item select{
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.historial_item h4{
+    margin-bottom: 10px ;
+}
+
+.historial__nombres{
+    grid-area: select1;
+}
+
+.historial__mes{
+    grid-area: select2;
+}
+
+.btn-uno, .btn-dos{
+    border-top:1px solid #2b4949 ;
+}
+
+.btn-h h4{
+    margin-top: 10px;
+}
+
+.btn-h button{
+    margin: auto;
+    display: block;
+    padding: 3px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.historial_item select{
+    border: 1px solid #00f0f0;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.btn-uno{
+    grid-area: bt1;
+}
+
+.btn-dos{
+    grid-area: bt2;
+}
+
+/*FIN FORMULARIO*/
+/*-----------------*/
+/*RESULTADO*/
+.contenedor__resultado{
+    grid-area: recibo;
+    width: 60%;
+    margin: auto;
+    display: none;
+    margin-bottom: 25px;
+}
+
+.recibo__hecho{
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(219, 142, 243, 0.8); 
+    opacity: 0.7;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto ;
+    grid-template-areas: "mes"
+                        "datos"
+                        "conceptos";
+}
+
+.mes__cargados{
+    grid-area: mes;
+    border-bottom: 2px solid black;
+   
+}
+
+.datos__cargados{
+    grid-area: datos;
+    border-bottom: 1px solid black;
+   
+}
+
+.conceptos__cargados{
+    grid-area: conceptos;
+    border-bottom: 2px solid black;
+}
+
+.dato__cargado{
+    display: flex;
+    
+}
+
+.dato__cargado p{
+    margin-right: 10px;
+    
+}
+
+.conceptos__cargados{
+    
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "concepto"
+                        "name"
+                        "bas"
+                        "desc"
+                        "bon"
+                        "tot";
+}
+
+.concepto__fila{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.nombre_concepto{
+    grid-area: concepto;
+    border-bottom: 2px solid black;
+}
+
+.basico{
+    grid-area: name;
+}
+
+.descuento{
+    grid-area: bas;
+}
+
+.bono{
+    grid-area: bon;
+}
+
+.total{
+    grid-area: tot;
+    margin-top: 5px;
+    border-top: 2px solid black;
+}
+/*FIN RESULTADO*/
+
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    /*HEADER*/
+
+    .nav__btn{
+        display: block;
+        height: 60px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .nav__btn button{
+        height: 90%;
+        background-color: rgb(245, 251, 63);
+        margin: auto 0;
+    }
+
+    .nav__btn button img{
+        height: 100%;
+        margin: auto;
+        display: block;
+    }
+
+    .nav__menu{
+       display: none;
+    }
+
+    .nav{
+        position: relative;
+    }
+
+    .nav__menu ul{
+        border:2px solid #000;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        padding: 0;
+        height: 155px;
+    }
+
+    .nav__menu ul li{
+        width: 300px;
+        border-bottom: 2px solid #000;
+        background-color: darkmagenta;
+        text-align: center;
+        margin: auto;
+        display: block;
+    }
+
+    .nav__menu ul li a{
+        border-radius: 0;
+        margin: auto;
+        font-size: 1em;
+        display: block;
+        height: 49px;
+        line-height: 30px;
+    }
+
+    /*FIN HEADER*/
+
+    /*GNERADOR*/
+    .formulario{    
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows: auto auto auto auto 20%;
+    grid-template-areas:    "t1 t3"
+                            "datos cal"
+                            "t2 t2"
+                            "smes smes"
+                            "btn1 btn1";
+    }
+
+    .form__t2, .cont__btn-1{
+        margin-top: 20px;
+    }
+
+    /*Lista*/
+    .personal__slogan{
+        display: none;
+    }
+
+    .personal{
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "lista"
+    }
+
+    .personal__lista{
+        grid-area: lista;
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 767px){
+
+    h1,h2{
+        font-size: 3vw;
+    }
+
+    h3,p, label, select, button{
+        font-size: 3vw;
+    }
+    h4{
+        font-size: 2.5vw;
+    }
+    /*HEADER*/
+    .header{
+        grid-template-rows: 50px;
+    }
+    .nav__btn{
+        display: block;
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .nav__btn button{
+        height: 80%;
+        background-color: rgb(245, 251, 63);
+        margin: auto 0;
+    }
+
+    .nav__btn button img{
+        height: 100%;
+        margin: auto;
+        display: block;
+    }
+
+    .nav__menu{
+        display: none;
+    }
+
+    .nav__menu{
+        display: none;
+     }
+ 
+     .nav{
+         position: relative;
+     }
+ 
+     .nav__menu ul{
+         border: 2px solid #000;
+         flex-direction: column;
+         position: absolute;
+         right: 0;
+         padding: 0;
+         height: 135px;
+     }
+ 
+     .nav__menu ul li{
+         width: 250px;
+         border-bottom: 1px solid #000;
+         background-color: darkmagenta;
+         text-align: center;
+         margin: auto;
+         display: block;
+     }
+ 
+     .nav__menu ul li a{
+         border-radius: 0;
+         margin: auto;
+         font-size: 0.8em;
+         display: block;
+         height: 43px;
+         line-height: 30px;
+     }
+    /*FIN HEADER*/
+
+    /*generador*/
+    /*GNERADOR*/
+    .formulario{    
+        display: grid;
+        grid-template-columns:100%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:    "t1"
+                                "datos"
+                                "t3"
+                                "cal"
+                                "t2"
+                                "smes"
+                                "btn1";
+                                padding: 0;
+                                margin: 10px 20px;
+                                padding-bottom: 10px;
+        }
+        
+    
+        .form__t3, .form__t2{
+            margin-top: 20px;
+        }
+
+        .cont__btn-1{
+            margin-top: 10px;
+        }
+
+        .portada{
+            display: none;
+        }
+
+        /*Lista*/
+    .personal__slogan{
+        display: none;
+    }
+
+    .personal{
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "lista"
+    }
+
+    .personal__lista{
+        grid-area: lista;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .historial{
+        margin: auto;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto ;
+        grid-template-areas:    "haa"        
+                                "hba"
+                                "hca"
+                                "hfa";
+    }
+
+    .historial__nombres{
+        grid-area: haa;
+    }
+    .historial__mes{
+        grid-area: hba;
+    }
+    .btn-uno{
+        grid-area: hca;
+    }
+    .btn-dos{
+        grid-area: hfa;
+    }
+}
+
+
+
+/*histroial*/
+#mostrado{
+    margin-top: 50px;
+}
+.historial__resultado{
+    border: 1px solid #00f0f0;
+    border-radius: 5px;
+    margin: 0 20px;
+    display: flex;
+    margin-bottom: 60px; /*para espacio abajo*/
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mostrado_h{
+    padding: 5px;
+    width: 30%;
+    display: block;
+    height: auto;
+    border: 1px solid #303333;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: rgb(214, 230, 201);
+}
+
+.mdatos__cargados{
+    border-bottom: 1px solid black;
+   
+}
+
+.mconceptos__cargados{
+    border-bottom: 1px solid black;
+}
+
+.mdato__cargado{
+    display: flex;
+    
+}
+
+.mdato__cargado p{
+    margin-right: 10px;
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .mostrado_h{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .mostrado_h{
+        width: 80%;
+    }
+}
+
+.mmes__cargados{
+    grid-area: mes;
+    border-bottom: 1px solid black;
+   
+}
+
+.mdatos__cargados{
+    grid-area: datos;
+    border-bottom: 1px solid black;
+   
+}
+
+.mconceptos__cargados{
+    grid-area: conceptos;
+    border-bottom: 1px solid black;
+}
+
+.mdato__cargado{
+    display: flex;
+    
+}
+
+.mdato__cargado p{
+    margin-right: 10px;
+    
+}
+
+.mconceptos__cargados{
+    
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "concepto"
+                        "name"
+                        "bas"
+                        "desc"
+                        "bon"
+                        "tot";
+}
+
+.mconcepto__fila{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.mnombre_concepto{
+    grid-area: concepto;
+    border-bottom: 1px solid black;
+}
+
+.mbasico{
+    grid-area: name;
+}
+
+.mdescuento{
+    grid-area: bas;
+}
+
+.mbono{
+    grid-area: bon;
+}
+
+.mtotal{
+    grid-area: tot;
+    margin-top: 5px;
+    border-top: 2px solid black;
+}

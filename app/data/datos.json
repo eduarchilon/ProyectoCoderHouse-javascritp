@@ -1,0 +1,45 @@
+[
+    {   "persona":{
+            "nombre": "Sebastian",
+            "apellido": "Legger",
+            "dni": 41256385
+        },
+        "recibo":{
+            "mes":"Enero",
+            "nMes": 1,
+            "basico":13000.00,
+            "descuento": 500.00,
+            "bono": 600.00
+        }
+    },
+
+
+    {   "persona":{
+        "nombre": "Eric",
+        "apellido": "Prydz",
+        "dni": 41458652
+    },
+    "recibo":{
+        "mes":"Enero",
+        "nMes": 1,
+        "basico":14000.00,
+        "descuento": 600.00,
+        "bono": 500.00
+    }
+    },
+    
+    {   "persona":{
+        "nombre": "Dario",
+        "apellido": "Nunez",
+        "dni": 41248597
+    },
+    "recibo":{
+        "mes":"Enero",
+        "nMes": 1,
+        "basico":15000.00,
+        "descuento": 700.00,
+        "bono": 600.00
+    }
+    }
+    
+]
